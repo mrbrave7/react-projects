@@ -1,0 +1,22 @@
+[data-theme="light"]:root{
+  --bg-homepage:#fff;
+  --text-color:#232323;
+}
+[data-theme="dark"]:root{
+  --bg-homepage:#272525;
+  --text-color:#fff;
+}
+body{
+  background: var(--bg-homepage);
+  color:var(--text-color);
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 40px;
+}
