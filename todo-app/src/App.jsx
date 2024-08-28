@@ -19,11 +19,11 @@ const App = () => {
     if (savedTodos && savedTodos.length > 0) {
       setTodos(savedTodos);
     }
-  }, []); // Only run once when the component mounts
+  }, []);
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
-  }, [todos]); // Run every time todos changes
+  }, [todos]);
 
   return (
     <Todoprovider value={{ todos, addTodo, deleteTodo }}>

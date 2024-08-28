@@ -1,0 +1,37 @@
+.game-over-section{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+.inner-game-over-container{
+    padding: 2rem;
+    background: #000;
+    color: aliceblue;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.inner-game-over-container h1{
+    color: aqua;
+    font-size: 3rem;
+}
+.inner-game-over-container button{
+    outline: none;
+    border: 2px solid aqua;
+    background: transparent;
+    color: aqua;
+    height: 40px;
+    width: 120px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.inner-game-over-container button:hover{
+    background: aqua;
+    color: #000;
+}
