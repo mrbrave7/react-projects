@@ -1,18 +1,9 @@
-// import { Outlet } from 'react-router-dom'
-import Sidebar from './Components/Sidebar'
-import Transaction from './Components/TransactionForm/Transaction'
-// import Login from './Pages/Login/Login'
-// 
+import { Outlet } from "react-router-dom";
+
 const App = () => {
   return (
-    <main className='mainSection'>
-      <Sidebar />
-      <Transaction />
-      {/* <Outlet /> */}
-      {/* <Login /> */}
-    </main>
-  )
-}
+      <Outlet />
+  );
+};
 
-export default App
-
+export default App;

@@ -1,31 +1,31 @@
-/* eslint-disable no-unused-vars */
-import { createContext, useContext } from "react";
+/* eslint-disable react/prop-types */
+import { createContext, useContext, useState } from 'react';
 
-export const userContext = createContext({
-    user:{
-        name:"Pawan Kumar",
-        image:"...",
-        salary:45000
-    },
-    transactions:[
-        {
-            id:Date.now(),
-            transactionType:"expense",
-            transactionAmount:45000,
-            transactionName:"Home Rent",
-            transactionRemarks:"This Is The Remarks Of Transaction"
-        }
-    ],
-    addUser:(user) => {},
-    deleteUser:(user) => {},
-    alterUser:(name) => {},
-    addTransaction:(transaction) => {},
-    alterTransaction:(id,transaction) => {},
-    deleteTransaction:(id) => {}
-});
-
+// Create the context
+export const UserContext = createContext();
 export const useUser = () => {
-    return useContext(userContext)
+    return useContext(UserContext)
 }
+export const UserProvider = ({ children }) => {
+    const [user, setUser] = useState({ isAuthenticated: false, user: null });
 
-export const userProvider = userContext.Provider
+    const loginUser = (userData) => {
+        setUser({
+            isAuthenticated: true,
+            user: userData,
+        });
+    };
+
+    const logoutUser = () => {
+        setUser({
+            user: null,
+            isAuthenticated: false,
+        });
+    };
+
+    return (
+        <UserContext.Provider value={{ user, loginUser, logoutUser }}>
+            {children}
+        </UserContext.Provider>
+    );
+};

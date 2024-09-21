@@ -17,8 +17,6 @@ a{
 body{
   height: 100vh;
   width: 100vw;
-  padding-inline: 4rem;
-  padding-block: 1rem;
   position: relative;
   background: var(--body-bg-color);
   display: flex;
