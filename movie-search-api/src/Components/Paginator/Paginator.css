@@ -1,0 +1,19 @@
+.paginator-buttons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.paginator-buttons button{
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    color: hotpink;
+}
+button:disabled{
+    border: 2px solid #fff;
+    background: hotpink;
+    color: #fff;
+}

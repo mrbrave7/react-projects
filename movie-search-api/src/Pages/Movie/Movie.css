@@ -1,0 +1,131 @@
+.movie-description-page {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
+    padding-inline: 4rem;
+    padding-block: 2rem;
+    overflow-y: auto; /* Use overflow-y instead of overflow: scroll for vertical scrolling */
+}
+
+.movie-title {
+    font-size: 4rem;
+}
+
+.movie-scenes {
+    height: 100px;
+    width: 160px;
+    object-fit: cover;
+    margin-bottom: 1rem; /* Add margin to space out scenes */
+}
+
+.poster {
+    height: 600px;
+    position: relative;
+    width: 400px;
+}
+
+.poster img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; /* Ensure the image fits correctly */
+}
+
+.poster .shadow {
+    position: absolute;
+    z-index: 1; /* Ensure it's over the poster image */
+    top: 0;
+    left: 0;
+    height: 100%; /* Adjust height and width to cover the entire poster */
+    width: 100%;
+    background: linear-gradient(transparent, transparent, #00000094, #000);
+}
+
+.scenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* Consistent gap for scene images */
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.upper-description {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensure responsive layout for small screens */
+}
+
+.details {
+    width: 50%; /* Simpler and consistent width */
+}
+
+.casts {
+    background: grey;
+    padding: 1rem; /* Add padding for better structure */
+    border-radius: 8px;
+}
+
+.cast-name {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start for better spacing */
+}
+
+.cast-detail-card {
+    width: 130px; /* Fix width for a consistent card size */
+    text-align: center; /* Center text */
+}
+
+.cast-detail-card img {
+    height: 200px;
+    width: 100%; /* Full width of the card */
+    object-fit: cover;
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+.cast-detail-card h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0.5rem; /* Spacing between image and name */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Prevent text overflow */
+}
+
+.genres-names {
+    display: flex;
+    gap: 0.5rem; /* Tighter gap for genre tags */
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.genre {
+    background: #fff;
+    color: #000;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .upper-description {
+        flex-direction: column;
+        align-items: center; /* Center align content on smaller screens */
+    }
+
+    .poster {
+        width: 100%; /* Full width on smaller screens */
+        height: auto;
+    }
+
+    .details {
+        width: 100%; /* Full width for details on smaller screens */
+    }
+}
